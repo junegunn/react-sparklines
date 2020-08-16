@@ -1513,7 +1513,8 @@ var SparklinesLine = function (_React$Component) {
           margin = _props.margin,
           color = _props.color,
           style = _props.style,
-          onMouseMove = _props.onMouseMove;
+          onMouseMove = _props.onMouseMove,
+          tooltip = _props.tooltip;
 
 
       var linePoints = points.map(function (p) {
@@ -1560,7 +1561,7 @@ var SparklinesLine = function (_React$Component) {
       return _react2.default.createElement(
         'g',
         null,
-        tooltips,
+        tooltip ? tooltips : null,
         _react2.default.createElement('polyline', { points: fillPoints.join(' '), style: fillStyle }),
         _react2.default.createElement('polyline', { points: linePoints.join(' '), style: lineStyle })
       );
@@ -1572,9 +1573,11 @@ var SparklinesLine = function (_React$Component) {
 
 SparklinesLine.propTypes = {
   color: _propTypes2.default.string,
-  style: _propTypes2.default.object
+  style: _propTypes2.default.object,
+  tooltip: _propTypes2.default.boolean
 };
 SparklinesLine.defaultProps = {
+  tooltip: true,
   style: {},
   onMouseMove: function onMouseMove() {}
 };
