@@ -41,6 +41,11 @@ const Simple = () =>
         <SparklinesLine />
     </Sparklines>
 
+const Simple2 = () =>
+    <Sparklines data={sampleData}>
+        <SparklinesLine tooltip={false} />
+    </Sparklines>
+
 const SimpleCurve = () =>
     <Sparklines data={sampleData}>
         <SparklinesCurve />
@@ -295,6 +300,7 @@ const RealWorld9 = () =>
 const demos = {
     'headersparklines': Header,
     'simple': Simple,
+    'simple2': Simple2,
     'simpleCurve': SimpleCurve,
     'customizable1': Customizable1,
     'customizable2': Customizable2,
