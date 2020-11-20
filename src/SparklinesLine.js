@@ -5,7 +5,7 @@ export default class SparklinesLine extends React.Component {
   static propTypes = {
     color: PropTypes.string,
     style: PropTypes.object,
-    tooltip: PropTypes.boolean,
+    tooltip: PropTypes.bool,
   };
 
   static defaultProps = {
